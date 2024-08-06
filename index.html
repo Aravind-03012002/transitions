@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con{
+            width: 300px;
+            /* height: 250px; */
+            border: 5px solid;
+            padding-left: 50px;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            height: 80vh;
+            background-color: rgb(0, 0, 0);
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6W8vRRNm1HlEGGyuZAsQhEahaAyp_R7JvrA&s);
+            background-size: 100%;
+            box-shadow: 2px 2px 2px 5px rgb(255, 0, 0);
+        }
+        .a,.b,.c,.d{
+            margin-bottom: 20px;
+            border: 2px solid black;
+            margin-left: 8px;
+            background-color: black;
+            color: white;
+            box-shadow: 2px 2px 2px rgba(255, 0, 0, 0.715);
+        }
+        .e{
+           margin-top: 20px ;
+           background-color: aqua;
+           border:5px solid ;
+           border-radius: 180px;
+           margin-left: 10px;
+           box-shadow: 2px 2px 2px 5px rgba(255, 0, 0, 0.715);
+
+        }
+        .a:hover,.b:hover,.c:hover,.d:hover{
+            background-color: rgb(232, 17, 17);
+        }
+        .con>.a:hover ~img{
+            transition-duration: 3s;
+            width: 250px;
+            /* background-color: aqua; */
+        }
+        .con > .b:hover ~img{
+            transition-duration: 4s;
+            transform: rotate(360deg);
+        }
+        .con > .c:hover ~img{
+            transition-duration: 2s;
+            transform: scalex(1.5);
+        }
+        .con > .d:hover ~img{
+            transition-duration: 2s;
+            transform: skew(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <button class="a">translate</button>
+        <button class="b">rotate</button>
+        <button class="c">scale</button>
+        <button class="d">skew</button><br>
+        <img class="e" src="./star.jpg" alt="" width="200px">
+    </div>
+</body>
+</html>
